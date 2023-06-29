@@ -9,7 +9,7 @@ const TodoList = () => {
   const { todoItems } = useSelector((state) => state.todo);
 
   if (todoItems.length === 0) {
-    return <p>There is no todo</p>;
+    return <p data-testid="noTodo">There is no todo</p>;
   }
 
   return (

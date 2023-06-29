@@ -21,12 +21,13 @@ const CreateTodo = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} data-testid="form">
       <input
         required
         name="title"
         onChange={(e) => setTitle(e.target.value)}
         value={title}
+        data-testid="input"
       />
       <button type="submit">add todo</button>
     </form>
