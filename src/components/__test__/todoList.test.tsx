@@ -1,7 +1,7 @@
 import userEvent from '@testing-library/user-event';
 import { render } from 'utils/testing/render';
 import TodoList from '../TodoList';
-import { act, fireEvent } from '@testing-library/react';
+import { act } from '@testing-library/react';
 import { testStore } from 'utils/testing/withStore';
 
 const mockTodos = [
@@ -41,7 +41,7 @@ describe('todo list unit tests', () => {
     expect(rendered.getByTestId('noTodo').textContent).toBe('There is no todo');
   });
 
-  it('must create new todo on form submit', async () => {
+  it('must show title of each todo in list', async () => {
     const rendered = render({
       component: <TodoList />,
       reduxData: {
